@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 # Import Splinter and BeautifulSoup
 from splinter import Browser
 from bs4 import BeautifulSoup as soup
@@ -30,7 +27,7 @@ news_title
 news_p = slide_elem.find('div', class_="article_teaser_body").get_text()
 news_p
 
-### Featured Images
+# ## JPL Space Images Featured Image
 
 # Visit URL
 url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
@@ -65,10 +62,3 @@ df
 df.to_html()
 
 browser.quit()
-
-
-# In[ ]:
-
-
-
-
