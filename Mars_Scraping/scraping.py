@@ -25,6 +25,8 @@ def scrape_all():
 
     # Stop webdriver and return data
     browser.quit()
+    print("-----")
+    print(data)
     return data
 
 
@@ -134,7 +136,9 @@ def image_title(browser):
         #get pic
         pic = hem_img_soup.select_one('img.wide-image').get('src')
         hemisphere['img_url'] = f'https://astrogeology.usgs.gov/{pic}'
-        
+        print("-----")
+        print(pic)
+
         #get title
         hemisphere['title'] = hem_img_soup.select_one("section.block h2.title").text
         
